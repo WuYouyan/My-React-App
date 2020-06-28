@@ -129,9 +129,15 @@ class Game extends React.Component {
       const desc = (step ? 
         'Go to move #' + step :
         'Go to game start') + position;
+
+      let clickHistory = '';
+      let stepNumber = this.state.stepNumber;
+      if ( stepNumber === step ) {
+        clickHistory ='click-history';
+      }
       return (
         <li key={step}>
-          <button onClick={() => this.jumpTo(step)}>{desc}</button>
+          <button className={clickHistory} onClick={() => this.jumpTo(step)}>{desc}</button>
         </li>
       );
     });

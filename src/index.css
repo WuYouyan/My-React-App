@@ -40,3 +40,7 @@ ol, ul {
 .game-info {   
     margin-left: 20px; 
 }
+
+.click-history {
+    font-weight: bold;
+}
